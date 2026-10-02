@@ -45,6 +45,11 @@ public class Validator {
                 int mesic = Integer.parseInt(d[1]);
                 int rok = Integer.parseInt(d[2]);
                 datum = LocalDate.of(rok, mesic, den);
+
+                if (datum.isAfter(LocalDate.now())) {
+                    chyby.add("neplatné datum");
+                    ok = false;
+                }
             } else {
                 chyby.add("neplatné datum");
                 ok = false;
