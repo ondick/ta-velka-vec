@@ -1,85 +1,33 @@
+import java.time.LocalDate;
+
 public class Vezen {
-    private String name;
-    private String dateOfBirth;
-    private String phoneNumber;
+    private String jmeno;
+    private String prijmeni;
+    private LocalDate datumNarozeni;
+    private String telefon;
     private String email;
-    private String city;
+    private String mesto;
     private String ulice;
-    private int cisloPopisny;
-    private int psc;
+    private int cisloPopisne;
+    private String psc;
 
-    public Vezen(String name, String dateOfBirth, String phoneNumber, String email, String city, String ulice, int cisloPopisny, int psc) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.phoneNumber = phoneNumber;
+    public Vezen(String jmeno, String prijmeni, LocalDate datumNarozeni, String telefon, String email, String mesto, String ulice, int cisloPopisne, String psc) {
+        this.jmeno = jmeno;
+        this.prijmeni = prijmeni;
+        this.datumNarozeni = datumNarozeni;
+        this.telefon = telefon;
         this.email = email;
-        this.city = city;
+        this.mesto = mesto;
         this.ulice = ulice;
-        this.cisloPopisny = cisloPopisny;
+        this.cisloPopisne = cisloPopisne;
         this.psc = psc;
     }
 
-    public String getName() {
-        return name;
+    public String getPrijmeni() {
+        return prijmeni;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getUlice() {
-        return ulice;
-    }
-
-    public int getCisloPopisny() {
-        return cisloPopisny;
-    }
-
-    public int getPsc() {
-        return psc;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setUlice(String ulice) {
-        this.ulice = ulice;
-    }
-
-    public void setCisloPopisny(int cisloPopisny) {
-        this.cisloPopisny = cisloPopisny;
-    }
-
-    public void setPsc(int psc) {
-        this.psc = psc;
+    public int getRokNarozeni() {
+        return datumNarozeni.getYear();
     }
 }
